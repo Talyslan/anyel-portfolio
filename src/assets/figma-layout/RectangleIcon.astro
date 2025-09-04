@@ -1,0 +1,25 @@
+---
+interface Props {
+    size?: number;
+    color: string;
+}
+
+const { size = 35, color = '#8D5BE5' } = Astro.props;
+---
+
+<svg
+    width={size}
+    height={size}
+    viewBox="0 0 35 35"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <rect
+        x="1.64432"
+        y="1.73606"
+        width="31.5625"
+        height="31.5625"
+        rx="2.25447"
+        stroke={color}
+        stroke-width="2.25447"></rect>
+</svg>

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'The New Elegance';
+    src: url('/fonts/The-New-Elegance/Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'The New Elegance';
+    src: url('/fonts/The-New-Elegance/Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'The New Elegance';
+    src: url('/fonts/The-New-Elegance/Condensed.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'The New Elegance';
+    src: url('/fonts/The-New-Elegance/Condensed-Italic.ttf') format('truetype');
+    font-style: italic;
+}
