@@ -1,10 +1,10 @@
 ---
 interface Props {
     size?: number;
-    color: string;
+    className?: string;
 }
 
-const { size = 35, color = '#8D5BE5' } = Astro.props;
+const { size = 24, className } = Astro.props;
 ---
 
 <svg
@@ -13,6 +13,7 @@ const { size = 35, color = '#8D5BE5' } = Astro.props;
     viewBox="0 0 35 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    class={className}
 >
     <rect
         x="1.64432"
@@ -20,6 +21,6 @@ const { size = 35, color = '#8D5BE5' } = Astro.props;
         width="31.5625"
         height="31.5625"
         rx="2.25447"
-        stroke={color}
+        stroke="currentColor"
         stroke-width="2.25447"></rect>
 </svg>

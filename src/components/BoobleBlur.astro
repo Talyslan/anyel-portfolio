@@ -1,0 +1,32 @@
+---
+interface Props {
+    top?: string; // ex: '10%' ou '0'
+    left?: string; // ex: '50%' ou '0'
+    right?: string; // opcional
+    bottom?: string; // opcional
+    size?: string; // ex: '12rem', default: '12rem'
+    color?: string; // ex: 'bg-purple-300/50', default: 'bg-purple-300/50'
+    blur?: string; // ex: 'blur-xl', default: 'blur-xl'
+}
+
+const {
+    top = '0',
+    left = '0',
+    right,
+    bottom,
+    size = '10rem',
+    color = 'blur-accent',
+    blur = 'blur-[200px]'
+} = Astro.props;
+
+const style = `
+    top: ${top};
+    left: ${left};
+    ${right ? `right: ${right};` : ''}
+    ${bottom ? `bottom: ${bottom};` : ''}
+    width: ${size};
+    height: ${size};
+`;
+---
+
+<div class={`absolute rounded-full ${color} ${blur}`} style={style}></div>

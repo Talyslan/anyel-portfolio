@@ -1,0 +1,121 @@
+---
+import { BoobleBlur, BigTexts, Carousel, CustomLink } from '.';
+import { UserPenIcon } from '../assets';
+---
+
+<main>
+    <section
+        class="text-primary-foreground min-h-screen flex flex-col items-center justify-center gap-15 text-center
+                bg-[url('/video.png')] bg-cover bg-center"
+    >
+        <BoobleBlur top="-90%" left="50" size="55rem" />
+
+        <h1 class="font-elegance italic">
+            Design que conecta. <br /> Estratégia que entrega.
+        </h1>
+        <h2>
+            Landing pages, identidades visuais e <br /> conteúdo para redes sociais
+            <strong
+                >criados com <br /> propósito, clareza e personalidade.</strong
+            >
+        </h2>
+        <CustomLink href="/">
+            <UserPenIcon />
+            Fala comigo
+        </CustomLink>
+    </section>
+
+    <section class="text-second-foreground bg-secondary">
+        <div class="border border-gray-950 flex flex-col p-10">
+            <p>
+                Se você tem um projeto e precisa de alguém <br /> pra traduzir sua
+                ideia em algo visual, <br /> funcional e coerente, <strong
+                    >eu posso te ajudar.</strong
+                >
+            </p>
+            <p>
+                Cada trabalho é pensado <strong> com cuidado </strong> — <br /> alinhando
+                forma, intenção e resultado.
+            </p>
+
+            <CustomLink href="/">
+                <UserPenIcon />
+                Vamos criar juntos
+            </CustomLink>
+        </div>
+
+        <BigTexts>Conversão</BigTexts>
+    </section>
+
+    <section class="text-primary-foreground bg-primary">
+        <div class="px-4 py-2">
+            <span class="uppercase">Resultados</span>
+        </div>
+
+        <h2 class="font-elegance">Para quem já prestei serviço:</h2>
+
+        <Carousel />
+    </section>
+
+    <section class="text-primary-foreground bg-primary">
+        <p>
+            Já desenvolvi muitos projetos ao lado de pessoas e marcas <br />com
+            histórias diferentes, mas um objetivo em comum: <br />
+            <strong> comunicar melhor e causar impacto.</strong>
+        </p>
+        <CustomLink href="/">Quero começar um projeto!</CustomLink>
+    </section>
+
+    <section
+        class="text-primary-foreground bg-primary flex justify-between items-center gap-2"
+    >
+        <img
+            src="/photo-owner.jpg"
+            alt="Foto do Carlos Anyel"
+            class="transform scale-100"
+        />
+
+        <div class="flex flex-col gap-5">
+            <h2 class="font-elegance">Quem vai te acompanhar?</h2>
+
+            <div class="flex flex-col gap-2">
+                <p>
+                    Opa! Meu nome é Anyel, designer gráfico com foco em
+                    identidade <br /> visual, landing pages e conteúdo digital ,e
+                    eu acredito que o design <br /> é <strong
+                        >uma das formas mais poderosas de criar conexão.</strong
+                    >
+                </p>
+                <p>
+                    Meu processo é colaborativo, simples e direto. Ouço, entendo
+                    e <br /> transformo ideias em soluções visuais que fazem sentido.
+                    <br />Se você busca um trabalho cuidadoso, com propósito e
+                    resultado,<br /> me manda uma mensagem. <strong
+                        >Vai ser um prazer te ouvir.</strong
+                    >
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-second-foreground bg-secondary">
+        <BigTexts>CALL TO ACTION</BigTexts>
+
+        <h2 class="font-elegance">
+            Tem um projeto em mente? <br /> Me conta mais sobre ele.
+        </h2>
+
+        <p>
+            Se você gostou do que viu por aqui e acredita que eu posso te
+            ajudar, me manda uma mensagem.
+        </p>
+        <p>
+            Vai ser ótimo ouvir suas ideias e pensar juntos numa solução que
+            faça sentido pra você — e pra quem você quer alcançar.
+        </p>
+
+        <CustomLink href="/" variant="secondary" class="uppercase"
+            >Converse comigo</CustomLink
+        >
+    </section>
+</main>

@@ -1,0 +1,27 @@
+---
+import {
+    CursorIcon,
+    HashtagIcon,
+    LetterTIcon,
+    PenIcon,
+    RectangleIcon,
+    ArrowIcon
+} from '../../assets';
+import IconComponent from './IconComponent.astro';
+
+const icons = [CursorIcon, HashtagIcon, PenIcon, RectangleIcon, LetterTIcon];
+---
+
+<div
+    class="fixed bottom-10 w-full flex justify-center items-center z-50 text-primary-foreground"
+>
+    <div
+        class="w-full max-w-[500px] flex items-center justify-between rounded-2xl backdrop-blur-md border border-white/20 shadow-lg px-20 py-3"
+    >
+        {icons.map(item => {
+            return (
+                <IconComponent Icon={item} className="rounded-md text-[#8D5BE5] p-2 hover:bg-purple-600 hover:text-white transition-all duration-300"/>
+            )
+        })}
+    </div>
+</div>

@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import { fonts } from './src/assets/config/fonts';
+import { fonts } from './src/config/fonts';
 
 // https://astro.build/config
 export default defineConfig({

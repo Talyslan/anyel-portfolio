@@ -1,6 +1,39 @@
-<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.0387 1.90417V37.412" stroke="#8D5BE5" stroke-width="2.25447" stroke-linecap="round"/>
-<path d="M31.0197 1.62238V37.1302" stroke="#8D5BE5" stroke-width="2.25447" stroke-linecap="round"/>
-<path d="M1.42987 30.3668H36.9377" stroke="#8D5BE5" stroke-width="2.25447" stroke-linecap="round"/>
-<path d="M1.99347 8.3858H37.5013" stroke="#8D5BE5" stroke-width="2.25447" stroke-linecap="round"/>
+---
+interface Props {
+    size?: number;
+
+    className?: string;
+}
+
+const { size = 24, className } = Astro.props;
+---
+
+<svg
+    width={size}
+    height={size}
+    viewBox="0 0 39 39"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class={className}
+>
+    <path
+        d="M9.0387 1.90417V37.412"
+        stroke="currentColor"
+        stroke-width="2.25447"
+        stroke-linecap="round"></path>
+    <path
+        d="M31.0197 1.62238V37.1302"
+        stroke="currentColor"
+        stroke-width="2.25447"
+        stroke-linecap="round"></path>
+    <path
+        d="M1.42987 30.3668H36.9377"
+        stroke="currentColor"
+        stroke-width="2.25447"
+        stroke-linecap="round"></path>
+    <path
+        d="M1.99347 8.3858H37.5013"
+        stroke="currentColor"
+        stroke-width="2.25447"
+        stroke-linecap="round"></path>
 </svg>
