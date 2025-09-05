@@ -7,16 +7,18 @@ interface Props {
 
 const { href, variant = 'primary', class: extraClass = '' } = Astro.props;
 
-const variantClasses = {
+const variantStyles = {
     primary:
-        '[background:linear-gradient(91.91deg,#7526FF_-24.91%,#9A60FF_38.23%,#7526FF_105.13%)] text-white hover:bg-purple-400',
+        'linear-gradient(91.91deg, #7526FF -24.91%, #9A60FF 38.23%, #7526FF 105.13%)',
     secondary:
-        '[background:linear-gradient(91.91deg,#38DC18_-24.91%,#43AC2F_38.23%,#38DC18_105.13%)] text-green-800 hover:bg-green-300'
+        'linear-gradient(91.91deg, #38DC18 -24.91%, #43AC2F 38.23%, #38DC18 105.13%)'
 };
-
-const classes = `${variantClasses[variant]} rounded-full px-6 py-2 flex justify-between items-center gap-1 text-lg ${extraClass}`;
 ---
 
-<a href={href} class={classes}>
+<a
+    href={href}
+    class={`rounded-full px-6 py-2 flex justify-between items-center gap-1 text-lg hover:cursor-pointer hover:opacity-95 text-white transition duration-200 z-10 ${extraClass}`}
+    style={`background: ${variantStyles[variant]}`}
+>
     <slot />
 </a>

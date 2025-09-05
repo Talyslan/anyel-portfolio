@@ -1,7 +1,25 @@
 ---
-const {} = Astro.props;
+interface Props {
+    top?: string;
+    left?: string;
+    right?: string;
+    bottom?: string;
+}
+
+const { top = '0', left = '0', right, bottom } = Astro.props;
+
+const style = `
+  top: ${top};
+  left: ${left};
+  ${right ? `right: ${right};` : ''}
+  ${bottom ? `bottom: ${bottom};` : ''}
+  transform: translateX(-50%);
+`;
 ---
 
-<span class="uppercase font-extrabold text-9xl absolute">
+<span
+    class="uppercase font-extrabold text-2xl text-gray-300/40 absolute -z-50 pointer-events-none"
+    style={style}
+>
     <slot />
 </span>

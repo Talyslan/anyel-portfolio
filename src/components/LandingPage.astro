@@ -1,12 +1,12 @@
 ---
-import { BoobleBlur, BigTexts, Carousel, CustomLink } from '.';
+import { BoobleBlur, BigTexts, Carousel, CustomLink, CustomRectangle } from '.';
 import { UserPenIcon } from '../assets';
 ---
 
 <main>
     <section
         id="initial"
-        class="text-primary-foreground min-h-screen flex flex-col items-center justify-center gap-15 text-center
+        class="text-primary-foreground min-h-screen flex-col gap-15 text-center
                 bg-[url('/video.png')] bg-cover bg-center"
     >
         <BoobleBlur top="-90%" left="50" size="55rem" />
@@ -26,8 +26,8 @@ import { UserPenIcon } from '../assets';
         </CustomLink>
     </section>
 
-    <section class="text-second-foreground bg-secondary">
-        <div class="border border-gray-950 flex flex-col p-10">
+    <section class="text-second-foreground bg-primary relative">
+        <CustomRectangle>
             <p>
                 Se você tem um projeto e precisa de alguém <br /> pra traduzir sua
                 ideia em algo visual, <br /> funcional e coerente, <strong
@@ -43,13 +43,16 @@ import { UserPenIcon } from '../assets';
                 <UserPenIcon />
                 Vamos criar juntos
             </CustomLink>
-        </div>
+        </CustomRectangle>
 
-        <BigTexts>Conversão</BigTexts>
+        <BigTexts bottom="0px" left="50%">Conversão</BigTexts>
     </section>
 
-    <section id="projects" class="text-primary-foreground bg-primary">
-        <div class="px-4 py-2">
+    <section
+        id="projects"
+        class="text-primary-foreground bg-secondary flex-col gap-10"
+    >
+        <div class="px-4 py-2 border rounded-full">
             <span class="uppercase">Resultados</span>
         </div>
 
@@ -58,8 +61,8 @@ import { UserPenIcon } from '../assets';
         <Carousel />
     </section>
 
-    <section class="text-primary-foreground bg-primary">
-        <p>
+    <section class="text-primary-foreground bg-secondary flex-col gap-10">
+        <p class="text-center">
             Já desenvolvi muitos projetos ao lado de pessoas e marcas <br />com
             histórias diferentes, mas um objetivo em comum: <br />
             <strong> comunicar melhor e causar impacto.</strong>
@@ -69,15 +72,15 @@ import { UserPenIcon } from '../assets';
 
     <section
         id="about"
-        class="text-primary-foreground bg-primary flex justify-between items-center gap-2"
+        class="text-primary-foreground bg-secondary flex justify-between items-center gap-2"
     >
         <img
-            src="/photo-owner.png"
+            src="/photo-owner.jpg"
             alt="Foto do Carlos Anyel"
-            class="transform scale-100"
+            class="transform w-1/2"
         />
 
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-5 w-full">
             <h2 class="font-elegance">Quem vai te acompanhar?</h2>
 
             <div class="flex flex-col gap-2">
@@ -100,20 +103,22 @@ import { UserPenIcon } from '../assets';
         </div>
     </section>
 
-    <section class="text-second-foreground bg-secondary">
-        <BigTexts>CALL TO ACTION</BigTexts>
+    <section class="text-gray-600 bg-primary flex-col gap-10 relative">
+        <BigTexts top="0" left="50%">CALL TO ACTION</BigTexts>
 
-        <h2 class="font-elegance">
+        <h2 class="font-elegance text-center !text-5xl leading-20">
             Tem um projeto em mente? <br /> Me conta mais sobre ele.
         </h2>
 
-        <p>
-            Se você gostou do que viu por aqui e acredita que eu posso te
+        <p class="text-center">
+            Se você gostou do que viu por aqui e acredita que <br /> eu posso te
             ajudar, me manda uma mensagem.
         </p>
-        <p>
-            Vai ser ótimo ouvir suas ideias e pensar juntos numa solução que
-            faça sentido pra você — e pra quem você quer alcançar.
+        <p class="text-center">
+            Vai ser ótimo ouvir suas ideias e pensar juntos <br /> numa solução que
+            faça sentido pra você <strong
+                >— e pra <br /> quem você quer alcançar.</strong
+            >
         </p>
 
         <CustomLink href="/" variant="secondary" class="uppercase"
