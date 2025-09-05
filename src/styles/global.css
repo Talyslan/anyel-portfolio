@@ -16,6 +16,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -62,6 +63,10 @@ strong {
     background-color: var(--bg-secondary);
 }
 
-.blur-accent {
+.bg-accent {
     background: #8d5be5;
+}
+
+.color-accent {
+    color: var(--color-accent);
 }
