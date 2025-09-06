@@ -1,6 +1,7 @@
 ---
 import { BoobleBlur, BigTexts, Carousel, CustomLink, CustomRectangle } from '.';
 import { UserPenIcon } from '../assets';
+import { instagramAnyelLink } from '../utils';
 ---
 
 <main>
@@ -20,7 +21,7 @@ import { UserPenIcon } from '../assets';
                 >criados com <br /> propósito, clareza e personalidade.</strong
             >
         </h2>
-        <CustomLink href="/">
+        <CustomLink href={instagramAnyelLink()}>
             <UserPenIcon />
             Fala comigo
         </CustomLink>
@@ -39,7 +40,7 @@ import { UserPenIcon } from '../assets';
                 forma, intenção e resultado.
             </p>
 
-            <CustomLink href="/">
+            <CustomLink href={instagramAnyelLink()}>
                 <UserPenIcon />
                 Vamos criar juntos
             </CustomLink>
@@ -69,7 +70,9 @@ import { UserPenIcon } from '../assets';
             histórias diferentes, mas um objetivo em comum: <br />
             <strong> comunicar melhor e causar impacto.</strong>
         </p>
-        <CustomLink href="/">Quero começar um projeto!</CustomLink>
+        <CustomLink href={instagramAnyelLink()}
+            >Quero começar um projeto!</CustomLink
+        >
     </section>
 
     <section
@@ -127,8 +130,10 @@ import { UserPenIcon } from '../assets';
             >
         </p>
 
-        <CustomLink href="/" variant="secondary" class="uppercase"
-            >Converse comigo</CustomLink
+        <CustomLink
+            href={instagramAnyelLink()}
+            variant="secondary"
+            class="uppercase">Converse comigo</CustomLink
         >
     </section>
 </main>
