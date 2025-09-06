@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './font.css';
+@import './carousel.css';
 
 :root {
     --font-sans: 'Neue Montreal', Arial, Helvetica, sans-serif;
@@ -21,14 +22,15 @@
 
 body {
     font-family: var(--font-sans);
+    background: var(--bg-primary);
 }
 
 section {
-    padding: 10rem 0;
+    padding: 8rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -99999;
+    /* z-index: -99999; */
 }
 
 h1 {

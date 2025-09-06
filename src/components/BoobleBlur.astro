@@ -7,20 +7,22 @@ interface Props {
     size?: string; // ex: '12rem', default: '12rem'
     color?: string; // ex: 'bg-purple-300/50', default: 'bg-purple-300/50'
     blur?: string; // ex: 'blur-xl', default: 'blur-xl'
+    class?: string;
 }
 
 const {
-    top = '0',
-    left = '0',
+    top,
+    left = '50',
     right,
     bottom,
-    size = '10rem',
+    size = '55rem',
     color = 'bg-accent',
-    blur = 'blur-[200px]'
+    blur = 'blur-[200px]',
+    class: className
 } = Astro.props;
 
 const style = `
-    top: ${top};
+    ${top ? `top: ${top};` : ''}
     left: ${left};
     ${right ? `right: ${right};` : ''}
     ${bottom ? `bottom: ${bottom};` : ''}
@@ -29,4 +31,8 @@ const style = `
 `;
 ---
 
-<div class={`absolute rounded-full ${color} ${blur}`} style={style}></div>
+<div
+    class={`absolute rounded-full ${color} ${blur} ${className}`}
+    style={style}
+>
+</div>

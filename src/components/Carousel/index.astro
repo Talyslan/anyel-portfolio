@@ -1,0 +1,63 @@
+---
+import {
+    DerickCarneiro,
+    DialogandoMais,
+    Leandro,
+    LuanaLeite,
+    TiagoFilemon
+} from '../../assets';
+import CardCarousel from './CardCarousel.astro';
+
+const clients = [
+    {
+        name: 'Derick Carneiro',
+        description: 'Ramo de copywriter',
+        path: DerickCarneiro
+    },
+    {
+        name: 'Dialogando Mais',
+        description: 'Mentora de investimentos',
+        path: DialogandoMais
+    },
+    {
+        name: 'Leandro',
+        description: 'Ramo de copywriter',
+        path: Leandro
+    },
+    {
+        name: 'Luana Leite',
+        description: 'Plataforma educacional',
+        path: LuanaLeite
+    },
+    {
+        name: 'Tiago Filemon',
+        description: 'Personal trainer',
+        path: TiagoFilemon
+    }
+];
+---
+
+<div class="carousel py-5 w-full overflow-hidden relative">
+    <div class="track flex gap-5">
+        {
+            clients.map(client => (
+                <CardCarousel
+                    name={client.name}
+                    description={client.description}
+                    path={client.path}
+                />
+            ))
+        }
+
+        <!-- duplicados para efeito infinito -->
+        {
+            clients.map(client => (
+                <CardCarousel
+                    name={client.name}
+                    description={client.description}
+                    path={client.path}
+                />
+            ))
+        }
+    </div>
+</div>

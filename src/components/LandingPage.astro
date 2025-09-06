@@ -6,10 +6,10 @@ import { UserPenIcon } from '../assets';
 <main>
     <section
         id="initial"
-        class="text-primary-foreground min-h-screen flex-col gap-15 text-center
+        class="relative text-primary-foreground min-h-screen flex-col gap-15 text-center
                 bg-[url('/video.png')] bg-cover bg-center"
     >
-        <BoobleBlur top="-90%" left="50" size="55rem" />
+        <BoobleBlur top="-90%" />
 
         <h1 class="font-elegance italic">
             Design que conecta. <br /> Estratégia que entrega.
@@ -26,7 +26,7 @@ import { UserPenIcon } from '../assets';
         </CustomLink>
     </section>
 
-    <section class="text-second-foreground bg-primary relative">
+    <section class="text-second-foreground relative overflow-hidden">
         <CustomRectangle>
             <p>
                 Se você tem um projeto e precisa de alguém <br /> pra traduzir sua
@@ -45,18 +45,20 @@ import { UserPenIcon } from '../assets';
             </CustomLink>
         </CustomRectangle>
 
-        <BigTexts bottom="0px" left="50%">Conversão</BigTexts>
+        <BigTexts bottom="-190px">Conversão</BigTexts>
     </section>
 
     <section
         id="projects"
-        class="text-primary-foreground bg-secondary flex-col gap-10"
+        class="!pb-0 relative text-primary-foreground bg-secondary flex-col gap-10"
     >
+        <!-- <BoobleBlur top="-700px" /> -->
+
         <div class="px-4 py-2 border rounded-full">
             <span class="uppercase">Resultados</span>
         </div>
 
-        <h2 class="font-elegance">Para quem já prestei serviço:</h2>
+        <h2 class="font-elegance !text-5xl">Para quem já prestei serviço:</h2>
 
         <Carousel />
     </section>
@@ -72,18 +74,20 @@ import { UserPenIcon } from '../assets';
 
     <section
         id="about"
-        class="text-primary-foreground bg-secondary flex justify-between items-center gap-2"
+        class="relative text-primary-foreground bg-secondary flex justify-center items-center gap-20"
     >
         <img
             src="/photo-owner.jpg"
             alt="Foto do Carlos Anyel"
-            class="transform w-1/2"
+            class="transform w-1/3"
         />
 
-        <div class="flex flex-col gap-5 w-full">
-            <h2 class="font-elegance">Quem vai te acompanhar?</h2>
+        <div class="flex flex-col gap-20">
+            <h2 class="font-elegance !text-5xl leading-20">
+                Quem vai te <br /> acompanhar?
+            </h2>
 
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-10">
                 <p>
                     Opa! Meu nome é Anyel, designer gráfico com foco em
                     identidade <br /> visual, landing pages e conteúdo digital ,e
@@ -101,10 +105,12 @@ import { UserPenIcon } from '../assets';
                 </p>
             </div>
         </div>
+
+        <!-- <BoobleBlur bottom="-700px" /> -->
     </section>
 
-    <section class="text-gray-600 bg-primary flex-col gap-10 relative">
-        <BigTexts top="0" left="50%">CALL TO ACTION</BigTexts>
+    <section class="text-gray-600 flex-col gap-10 relative overflow-hidden">
+        <BigTexts top="-150px">CALL TO ACTION</BigTexts>
 
         <h2 class="font-elegance text-center !text-5xl leading-20">
             Tem um projeto em mente? <br /> Me conta mais sobre ele.

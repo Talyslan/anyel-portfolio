@@ -6,19 +6,19 @@ interface Props {
     bottom?: string;
 }
 
-const { top = '0', left = '0', right, bottom } = Astro.props;
+const { top , left = '50%', right, bottom } = Astro.props;
 
 const style = `
-  top: ${top};
+  ${top ? `top: ${top};` : ''}
   left: ${left};
   ${right ? `right: ${right};` : ''}
   ${bottom ? `bottom: ${bottom};` : ''}
   transform: translateX(-50%);
-`;
+`.trim();
 ---
 
 <span
-    class="uppercase font-extrabold text-2xl text-gray-300/40 absolute -z-50 pointer-events-none"
+    class="-z-50 absolute inline uppercase font-extrabold text-[14rem] text-gray-300/40 pointer-events-none  whitespace-nowrap"
     style={style}
 >
     <slot />
