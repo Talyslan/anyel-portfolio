@@ -4,8 +4,7 @@ import {
     HashtagIcon,
     LetterTIcon,
     PenIcon,
-    RectangleIcon,
-    ArrowIcon
+    RectangleIcon
 } from '../../assets';
 import IconComponent from './IconComponent.astro';
 
@@ -13,7 +12,8 @@ const icons = [CursorIcon, HashtagIcon, PenIcon, RectangleIcon, LetterTIcon];
 ---
 
 <div
-    class="fixed bottom-10 w-4/5 left-1/2 -translate-x-1/2 mx-8 flex justify-center items-center z-50 text-primary-foreground"
+    id="floating-bar"
+    class="fixed bottom-10 w-4/5 left-1/2 -translate-x-1/2 mx-8 flex justify-center items-center z-50 text-primary-foreground transition-opacity duration-500 ease-in-out opacity-100"
 >
     <div
         class="w-full max-w-[500px] flex items-center md:justify-between justify-center gap-2 rounded-2xl backdrop-blur-md border border-white/20 shadow-lg md:px-20 px-0 py-3 [&>*:nth-child(n+4)]:hidden md:[&>*:nth-child(n+4)]:flex"
@@ -21,3 +21,72 @@ const icons = [CursorIcon, HashtagIcon, PenIcon, RectangleIcon, LetterTIcon];
         {icons.map(item => <IconComponent Icon={item} />)}
     </div>
 </div>
+
+<script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+        const bar = document.getElementById('floating-bar');
+        if (!bar) return;
+
+        let target = document.querySelector('footer');
+        if (!target) {
+            target = document.getElementById('end-of-page');
+        }
+        if (!target) {
+            const s = document.createElement('div');
+            s.id = 'end-of-page';
+            s.style.cssText = 'width:100%;height:1px;display:block;';
+            document.body.appendChild(s);
+            target = s;
+        }
+
+        const hide = () => {
+            bar.classList.add('opacity-0', 'pointer-events-none');
+            bar.classList.remove('opacity-100');
+        };
+        const show = () => {
+            bar.classList.remove('opacity-0', 'pointer-events-none');
+            bar.classList.add('opacity-100');
+        };
+
+        if ('IntersectionObserver' in window) {
+            const options = {
+                root: null,
+                rootMargin: '0px 0px 150px 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        hide();
+                    } else {
+                        show();
+                    }
+                });
+            }, options);
+
+            observer.observe(target);
+        } else {
+            let ticking = false;
+            const onScroll = () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY || window.pageYOffset;
+                        const docHeight = document.documentElement.scrollHeight;
+                        const winHeight = window.innerHeight;
+                        const distanceFromBottom =
+                            docHeight - (scrollY + winHeight);
+
+                        if (distanceFromBottom <= 200) hide();
+                        else show();
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll(); // avaliar ao carregar
+        }
+    });
+</script>

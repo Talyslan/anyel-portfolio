@@ -1,10 +1,9 @@
 ---
 interface Props {
-    top?: string; // ex: '10%' ou '0'
-    left?: string; // ex: '50%' ou '0'
-    right?: string; // opcional
-    bottom?: string; // opcional
-    size?: string; // ex: '12rem', default: '12rem'
+    top?: string; // ex: 'top-[10%]'
+    left?: string; // ex: 'left-1/2'
+    right?: string;
+    bottom?: string;
     color?: string; // ex: 'bg-purple-300/50', default: 'bg-purple-300/50'
     blur?: string; // ex: 'blur-xl', default: 'blur-xl'
     class?: string;
@@ -12,28 +11,26 @@ interface Props {
 
 const {
     top,
-    left = '50%',
+    left = 'left-1/2',
     right,
     bottom,
-    size = '55rem',
     color = 'bg-accent',
-    blur = 'blur-[200px]',
+    blur = 'lg:blur-[200px] md:blur-[150px] blur-[110px]',
     class: className
 } = Astro.props;
-
-const style = `
-    ${top ? `top: ${top};` : ''}
-    left: ${left};
-    ${right ? `right: ${right};` : ''}
-    ${bottom ? `bottom: ${bottom};` : ''}
-    width: ${size};
-    height: ${size};
-    transform: translateX(-50%);
-`;
 ---
 
 <div
-    class={`absolute rounded-full ${color} ${blur} ${className}`}
-    style={style}
+    class:list={[
+        'absolute rounded-full transform -translate-x-1/2',
+        color,
+        blur,
+        'lg:w-[55rem] lg:h-[55rem] md:w-[30rem] md:h-[30rem] sm:w-[20rem] sm:h-[20rem] w-[17rem] h-[17rem]',
+        className,
+        top,
+        left,
+        right,
+        bottom
+    ]}
 >
 </div>
