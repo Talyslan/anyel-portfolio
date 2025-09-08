@@ -10,17 +10,19 @@ import { instagramAnyelLink } from '../utils';
         class="relative text-primary-foreground min-h-screen flex-col gap-15 text-center
                 bg-[url('/video.png')] bg-cover bg-center z-30"
     >
-        <ArrowIcon class="bg-purple-700 p-[6px] w-7 h-7 absolute -bottom-3 z-40 rounded-full"/>
-        <BoobleBlur top="-650px" class="z-10" />
+        <ArrowIcon
+            class="bg-purple-700 p-[6px] w-7 h-7 absolute -bottom-3 z-40 rounded-full"
+        />
+        <!-- <BoobleBlur top="-650px" class="z-10" /> -->
 
-        <h1 class="font-elegance italic z-20">
+        <h1
+            class="font-elegance italic z-20 text-3xl md:text-5xl leading-12 md:leading-18"
+        >
             Design que conecta. <br /> Estratégia que entrega.
         </h1>
-        <h2>
+        <h2 class="md:text-3xl text-lg max-w-[40rem]">
             Landing pages, identidades visuais e <br /> conteúdo para redes sociais
-            <strong
-                >criados com <br /> propósito, clareza e personalidade.</strong
-            >
+            <strong>criados com propósito, clareza e personalidade.</strong>
         </h2>
         <CustomLink href={instagramAnyelLink()}>
             <UserPenIcon />
@@ -32,13 +34,13 @@ import { instagramAnyelLink } from '../utils';
         class="text-second-foreground bg-primary relative overflow-hidden z-20"
     >
         <CustomRectangle>
-            <p>
+            <p class="md:text-2xl text-xl text-center md:text-start">
                 Se você tem um projeto e precisa de alguém <br /> pra traduzir sua
                 ideia em algo visual, <br /> funcional e coerente, <strong
                     >eu posso te ajudar.</strong
                 >
             </p>
-            <p>
+            <p class="md:text-2xl text-xl text-center md:text-start">
                 Cada trabalho é pensado <strong> com cuidado </strong> — <br /> alinhando
                 forma, intenção e resultado.
             </p>
@@ -56,13 +58,13 @@ import { instagramAnyelLink } from '../utils';
         id="projects"
         class="!pb-0 relative text-primary-foreground bg-secondary flex-col gap-10"
     >
-        <BoobleBlur top="-700px" />
+        <!-- <BoobleBlur top="-700px" /> -->
 
         <div class="px-4 py-2 border rounded-full z-10">
             <span class="uppercase">Resultados</span>
         </div>
 
-        <h2 class="font-elegance !text-5xl z-10">
+        <h2 class="font-elegance text-3xl md:text-5xl z-10">
             Para quem já prestei serviço:
         </h2>
 
@@ -70,8 +72,8 @@ import { instagramAnyelLink } from '../utils';
     </section>
 
     <section class="text-primary-foreground bg-secondary flex-col gap-10">
-        <p class="text-center">
-            Já desenvolvi muitos projetos ao lado de pessoas e marcas <br />com
+        <p class="text-center md:text-2xl text-lg">
+            Já desenvolvi muitos projetos ao lado de pessoas e marcas com
             histórias diferentes, mas um objetivo em comum: <br />
             <strong> comunicar melhor e causar impacto.</strong>
         </p>
@@ -82,7 +84,7 @@ import { instagramAnyelLink } from '../utils';
 
     <section
         id="about"
-        class="relative text-primary-foreground bg-secondary flex justify-center items-center gap-20"
+        class="relative text-primary-foreground bg-secondary flex sm:flex-row flex-col justify-center items-center gap-20"
     >
         <img
             src="/photo-owner.jpg"
@@ -91,30 +93,30 @@ import { instagramAnyelLink } from '../utils';
         />
 
         <div class="flex flex-col gap-20">
-            <h2 class="font-elegance !text-5xl leading-20">
+            <h2 class="font-elegance text-3xl md:text-5xl italic leading-16">
                 Quem vai te <br /> acompanhar?
             </h2>
 
             <div class="flex flex-col gap-10 z-10">
-                <p>
+                <p class="md:text-2xl text-xl text-center md:text-start">
                     Opa! Meu nome é Anyel, designer gráfico com foco em
-                    identidade <br /> visual, landing pages e conteúdo digital ,e
-                    eu acredito que o design <br /> é <strong
+                    identidade visual, landing pages e conteúdo digital ,e eu
+                    acredito que o design é <strong
                         >uma das formas mais poderosas de criar conexão.</strong
                     >
                 </p>
-                <p>
+                <p class="md:text-2xl text-xl text-center md:text-start">
                     Meu processo é colaborativo, simples e direto. Ouço, entendo
-                    e <br /> transformo ideias em soluções visuais que fazem sentido.
-                    <br />Se você busca um trabalho cuidadoso, com propósito e
-                    resultado,<br /> me manda uma mensagem. <strong
+                    e transformo ideias em soluções visuais que fazem sentido.
+                    Se você busca um trabalho cuidadoso, com propósito e
+                    resultado, me manda uma mensagem. <strong
                         >Vai ser um prazer te ouvir.</strong
                     >
                 </p>
             </div>
         </div>
 
-        <BoobleBlur bottom="-700px" />
+        <!-- <BoobleBlur bottom="-700px" /> -->
     </section>
 
     <section
@@ -122,18 +124,18 @@ import { instagramAnyelLink } from '../utils';
     >
         <BigTexts top="-150px">CALL TO ACTION</BigTexts>
 
-        <h2 class="font-elegance text-center !text-5xl leading-20">
+        <h2 class="font-elegance text-center text-3xl md:text-5xl leading-20">
             Tem um projeto em mente? <br /> Me conta mais sobre ele.
         </h2>
 
-        <p class="text-center">
-            Se você gostou do que viu por aqui e acredita que <br /> eu posso te
+        <p class="text-center md:text-2xl text-xl">
+            Se você gostou do que viu por aqui e acredita que eu posso te
             ajudar, me manda uma mensagem.
         </p>
-        <p class="text-center">
-            Vai ser ótimo ouvir suas ideias e pensar juntos <br /> numa solução que
+        <p class="text-center md:text-2xl text-xl max-w-xl">
+            Vai ser ótimo ouvir suas ideias e pensar juntos numa solução que
             faça sentido pra você <strong
-                >— e pra <br /> quem você quer alcançar.</strong
+                >— e pra quem você quer alcançar.</strong
             >
         </p>
 
