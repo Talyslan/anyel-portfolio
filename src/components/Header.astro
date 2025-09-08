@@ -1,5 +1,6 @@
 ---
 import { instagramAnyelLink } from '../utils';
+import { MenuHamburger } from './MenuHamburger';
 ---
 
 <header
@@ -8,7 +9,7 @@ import { instagramAnyelLink } from '../utils';
     <div
         class="w-full max-w-[900px] flex items-center justify-between rounded-2xl backdrop-blur-md border border-white/20 shadow-lg px-10 py-2"
     >
-        <nav class="w-1/3">
+        <nav class="w-1/3 md:block hidden">
             <ul
                 class="w-full flex items-center md:gap-5 gap-0 justify-around
          [&>li>a]:py-2 md:[&>li>a]:px-9 [&>li>a]:px-4
@@ -21,6 +22,8 @@ import { instagramAnyelLink } from '../utils';
                 <li><a href="#about">Sobre</a></li>
             </ul>
         </nav>
+
+        <MenuHamburger client:load />
 
         <a
             href={instagramAnyelLink()}

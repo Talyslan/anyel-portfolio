@@ -1,4 +1,5 @@
 ---
+import { cn } from '@/lib/utils';
 import { ArrowIcon } from '../../assets';
 interface Props {
     Icon: (props: { className?: string; size?: number }) => any;
@@ -9,6 +10,11 @@ const { Icon, className } = Astro.props;
 ---
 
 <div class="flex items-center justify-center gap-2">
-    <Icon className={className} size={40} />
-    <ArrowIcon className="text-[#8D5BE5]" />
+    <Icon
+        className={cn(
+            'rounded-md text-[#8D5BE5] p-2 hover:bg-purple-600 hover:text-white transition-all duration-300 w-9 h-9',
+            className
+        )}
+    />
+    <ArrowIcon class="text-[#8D5BE5]" />
 </div>
