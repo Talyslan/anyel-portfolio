@@ -12,7 +12,7 @@ interface Props {
 
 const {
     top,
-    left = '50',
+    left = '50%',
     right,
     bottom,
     size = '55rem',
@@ -28,6 +28,7 @@ const style = `
     ${bottom ? `bottom: ${bottom};` : ''}
     width: ${size};
     height: ${size};
+    transform: translateX(-50%);
 `;
 ---
 
