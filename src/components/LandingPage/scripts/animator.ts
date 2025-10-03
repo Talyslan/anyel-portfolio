@@ -31,3 +31,35 @@ export function animateInitialTitle() {
         );
     }
 }
+
+export function animateParagraphsAndLink() {
+    const section = document.querySelector<HTMLElement>(
+        '#come-create-together'
+    );
+    if (!section) return;
+
+    const paragraphs = section.querySelectorAll<HTMLParagraphElement>('p');
+    const customLink = section.querySelector<HTMLElement>('#custom-link');
+
+    const tl = gsap.timeline({
+        defaults: { duration: 2, delay: 1, ease: 'power3.out' },
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 40%',
+            end: 'bottom 100%',
+            scrub: true
+        }
+    });
+
+    paragraphs.forEach((p, i) => {
+        tl.from(p, { opacity: 0, y: 30 }, i * 5);
+    });
+
+    if (customLink) {
+        tl.from(
+            customLink,
+            { opacity: 0, y: 30, immediateRender: true },
+            '>1.2'
+        );
+    }
+}

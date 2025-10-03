@@ -1,5 +1,6 @@
-import { animateInitialTitle } from './animator';
+import { animateParagraphsAndLink, animateInitialTitle } from './animator';
 
 document.addEventListener('DOMContentLoaded', () => {
     animateInitialTitle();
+    animateParagraphsAndLink();
 });
