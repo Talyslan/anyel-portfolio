@@ -1,16 +1,18 @@
 import { gsap } from '@/services';
 
 export function animateFigmaLayout() {
-    const bar = document.querySelector('#floating-bar');
+    const bar = document.querySelector<HTMLElement>('#floating-bar');
+    const footer = document.querySelector<HTMLElement>('footer');
 
-    if (!bar) return;
+    if (!bar || !footer) return;
+
+    animateFigmaLayoutInOutTouchsFooter(bar);
 
     gsap.from(bar, {
         y: 200,
-        opacity: 0,
-        duration: 1.5,
-        ease: 'power3.out',
-        onComplete: () => animateFigmaLayoutInOutTouchsFooter(bar)
+        delay: 2,
+        duration: 2,
+        ease: 'power3.out'
     });
 }
 
